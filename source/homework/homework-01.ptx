@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Homework 01</title>
+  <introduction>
+    <p>
+      Due: <alert>Friday 11th September 2026</alert>.
+    </p>
+    <p>
+      <alert>Instructions:</alert> Solutions should be written (or typed) clearly and legibly. Homeworks should be written alone without the use of AI.
+    </p>
+  </introduction>
+
+  <page>
+    <exercise>
+      <introduction>
+        <p>
+          Let <m>X</m> be an uncountable set. A set <m>A \subseteq X</m> is <term>cocountable</term> if its complement <m>A^c</m> is countable.
+        </p>
+      </introduction>
+      <task>
+        <p>
+          Show that the collection <m>\F</m> of all subsets of <m>X</m> which are either countable or cocountable forms a <m>\sigma</m>-algebra.
+        </p>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Define a function <m>\mu \colon \F \rightarrow \bR</m> by <m>\mu(A)=0</m> if <m>A</m> is countable, and <m>\mu(A) = 1</m> if <m>A</m> is cocountable. Show that <m>\mu</m> is a measure on <m>(X,\F)</m>.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Let <m>X</m> be a non-empty set. Show that the counting measure <m>c</m> on <m>(X,\P(X))</m> defines a measure.
+          Show that <m>(X,\P(X),c)</m> is a complete measure space.
+        </p>
+
+        <p>
+          If we endow <m>X</m> with the discrete topology, show that <m>c</m> is a Borel measure on <m>X</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Let <m>(X,\M)</m> be a measurable space. Fix <m>x \in X</m> and let <m>\delta_x</m> be the Dirac measure. Show that <m>\delta_x</m> is a measure.
+        </p>
+        <p>
+          Suppose <m>X</m> is a topological space, and <m>\M=\B(X)</m> is the Borel sets of <m>X</m>. Show that <m>\delta_x</m> is a Borel measure.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Let <m>(X,\F,\mu)</m> be a measure space.
+        </p>
+      </introduction>
+
+      <task>
+        <statement>
+          <p>
+            Define a collection of subsets <m>\F_0</m> by
+            <md>
+              \F_0 = \{A \cap B \colon A \in \F, B \subseteq C \text{ for some }C \in \F \text{ with }\mu(C) = 0 \}.
+            </md>
+            Show that <m>\F_0</m> is a <m>\sigma</m>-algebra.
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Define <m>\mu_0</m> on <m>\F_0</m> by
+            <md>
+              \mu_0(A\cup B) =  \mu(A) 
+            </md>
+            when <m>A \in \F</m> and <m>B \subseteq C</m> for some <m>C \in \F</m> with <m>\mu(C) = 0</m>.
+            Show that <m>\mu_0</m> is a measure on <m>(X,\F_0)</m>. (You should first show that is well-defined).
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Show that <m>(X,\F_0,\mu_0)</m> is a complete measure space.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+  </page>
+</worksheet>
