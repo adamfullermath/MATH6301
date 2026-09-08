@@ -68,7 +68,7 @@
           <p>
             Define a collection of subsets <m>\F_0</m> by
             <md>
-              \F_0 = \{A \cap B \colon A \in \F, B \subseteq C \text{ for some }C \in \F \text{ with }\mu(C) = 0 \}.
+              \F_0 = \{A \cup B \colon A \in \F, B \subseteq C \text{ for some }C \in \F \text{ with }\mu(C) = 0 \}.
             </md>
             Show that <m>\F_0</m> is a <m>\sigma</m>-algebra.
           </p>
