@@ -22,6 +22,36 @@
         <p>
           Show that the collection <m>\F</m> of all subsets of <m>X</m> which are either countable or cocountable forms a <m>\sigma</m>-algebra.
         </p>
+
+        <solution>
+          <p>
+            The empty set <m>\emptyset</m> is countable (it has <m>0</m> elements). Hence
+            <m>\emptyset \in \F.</m>
+          </p>
+
+          <p>
+            If <m>A \in \F</m>, then either <m>A</m> is countable, in which case <m>A^c</m> is cocountable, or <m>A</m> is cocountable, in which case <m>A</m> is countable.
+            In both cases <m>A^c\in \F</m>.
+          </p>
+
+          <p>
+            To show that <m>\F</m> is a <m>\sigma</m>-algebra it remains to show that <m>\F</m> is closed under countable unions.
+            Let <m>\{A_i\}_{i=1}^\infty</m> be a countable collection of sets in <m>\F</m>, and let <m>A = \bigcup_{i=1}^\infty A_i</m>.
+            If every set in <m>\{A_i\}_{i=1}^\infty</m> is countable, then <m>A</m> is countable (see <url href="https://adamfullermath.github.io/graduate-analysis/appendix-prereqs-4.html#prop-countable">Proposition A.2.6</url>).
+            Hence <m>A \in \F</m>.
+          </p>
+
+          <p>
+            If not all sets <m>\{A_i\}_{i=1}^\infty</m> are countable, then at least one is cocountable. Suppose <m>A_k</m> is cocountable for some <m>k</m>.
+            Then, using DeMorgan's identities,
+            <md>
+              \left(\bigcup_{i=1}^\infty A_i\right)^c = \bigcap_{i=1}^\infty A_i^c \subseteq A_k^c.
+            </md>
+            As <m>A_k^c</m> is countable, it follows that <m>\left(\bigcup_{i=1}^\infty A_i\right)^c</m> is countable, and thus <m>\bigcup_{i=1}^\infty A_i</m> is cocountable.
+            Hence <m>\bigcup_{i=1}^\infty A_i \in \F.</m>
+            We have thus shown that <m>\F</m> is a <m>\sigma</m>-algebra.
+          </p>
+        </solution>
       </task>
       <task>
         <statement>
@@ -29,6 +59,33 @@
             Define a function <m>\mu \colon \F \rightarrow \bR</m> by <m>\mu(A)=0</m> if <m>A</m> is countable, and <m>\mu(A) = 1</m> if <m>A</m> is cocountable. Show that <m>\mu</m> is a measure on <m>(X,\F)</m>.
           </p>
         </statement>
+
+        <solution>
+          <p>
+            It is immediate that <m>\mu(\emptyset)=0</m>, so we only need to show that <m>\mu</m> is countably additive.
+            To this end, let <m>\{A_i\}_{i=1}^\infty</m> be a countable family of <em>disjoint</em> sets in <m>\F</m>.
+            As above, if every set in <m>\{A_i\}_{i=1}^\infty</m> is countable, then the union <m>\bigcup_i A_i</m> is countable.
+            Thus
+            <md>
+              \mu\left(\bigcup_{i=1}^\infty A_i\right) = 0 = \sum_{i=1}^\infty \mu(A_i).
+            </md>
+          </p>
+
+          <p>
+            If <m>A_k</m> is cocountable for some fixed <m>k</m>, then as shown above, <m>\bigcup_i A_i</m> is cocountable.
+            Note that, since the sets in <m>\{A_i\}_{i=1}^infty</m> are disjoint, 
+            <md>
+              A_i \subseteq A_k^c
+            </md>
+            for all <m>i \neq k</m>.
+            Thus, for <m>i\neq k</m>, <m>A_i</m> is countable.
+            Hence
+            <md>
+              \mu\left(\bigcup_{i=1}^\infty A_i\right) = 1 = \mu(A_k) + \sum_{i\neq k} \mu(A_i).
+            </md>
+            Hence <m>\mu</m> is countably additive, and therefore <m>\mu</m> is a measure on <m>(X,\F).</m>
+          </p>
+        </solution>
       </task>
     </exercise>
 
@@ -43,6 +100,62 @@
           If we endow <m>X</m> with the discrete topology, show that <m>c</m> is a Borel measure on <m>X</m>.
         </p>
       </statement>
+
+      <solution>
+        <p>
+          As the empty set has zero elements, <m>c(\emptyset)=0</m>.
+        </p>
+
+        <p>
+          Let <m>\{A_i\}_{i=1}^\infty</m> be a countable family of disjoint subsets of <m>X</m>, and let <m>A = \bigcup_i A_i</m>.
+          If <m>A</m> is finite, then all but at most finitely many of the sets in <m>\{A_i\}_{i=1}^\infty</m> are empty.
+          Rearranging and removing the empty sets, there is an <m>n</m> such that
+          <m>A = \bigcup_{i=1}^n A_n</m>.
+          That is <m>\{A_i\}_{i=1}^n</m> is a partition of <m>A</m>.
+          By the pigeonhole principle,
+          <md>
+            c(A) = \sum_{i=1}^n c(A_i) = \sum_{i=1}^\infty c(A_i).
+          </md>
+        </p>
+
+        <p>
+          If there is a <m>k</m> such that <m>A_k</m> has infinite cardinality, then <m>A</m> has infinite cardinality as <m>A_k \subseteq A</m>.
+          Thus,
+          <md> 
+            c(A) = \infty = c(A_k) \leq \sum_{i=1}^\infty c(A_i)
+          </md>
+          and so <m>c(A) = \sum_{i=1}^\infty c(A_i).</m>
+        </p>
+
+        <p>
+          Finally, suppose every set in <m>\{A_i\}_{i=1}^\infty</m> is finite, but <m>A</m> is infinite.
+          Then there are infinitely <m>i</m> such that <m>A_i</m> is non-empty.
+          We have
+          <md>
+            \sum_{i=1}^\infty c(A_i) \geq \sum_{i=1}^\infty 1 = \infty.
+          </md>
+          Thus <m>c(A) = \sum_{i=1}^\infty c(A_i).</m>
+          We have thus shown that <m>c</m> is a measure on <m>(X,\P(X)).</m>
+        </p>
+
+        <p>
+          Note that any measure on the measure space <m>(X,\P(X))</m> is complete, since all subsets of <m>X</m> are in the <m>\sigma</m>-algebra.
+          Alternatively, the only set satisfying <m>c(A)=0</m> is the empty set, and the only subset of <m>\emptyset</m> is <m>\emptyset.</m>
+        </p>
+
+        <p>
+          Now assume that <m>X</m> is endowed with the discrete topology. In this case every subset of <m>X</m> is open.
+          Thus, the Borel sets <m>\B(X)</m> are all subsets of <m>X</m>.
+        </p>
+
+        <p>
+          Let <m>K \subseteq X</m> be a compact set.
+          The sets <m>\{ \{x\} \}_{x\in K}</m> form an open cover of <m>K</m>.
+          Since <m>K</m> is compact, there is a finite subcover, and so <m>K</m> is finite.
+          It follows that if <m>K \subseteq X</m> is compact, then <m>c(K) \lt \infty.</m>
+          Thus <m>c</m> is a Borel measure on <m>(X,\P(X)).</m>
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
@@ -54,6 +167,29 @@
           Suppose <m>X</m> is a topological space, and <m>\M=\B(X)</m> is the Borel sets of <m>X</m>. Show that <m>\delta_x</m> is a Borel measure.
         </p>
       </statement>
+
+      <solution>
+        <p>
+          As <m>x\notin \emptyset</m>, <m>\delta_x(\emptyset)=0.</m>
+        </p>
+
+        <p>
+          Let <m>\{A_i\}_{i=1}</m> be a countable collection of disjoint sets in <m>\M</m> and let <m>A = \bigcup_{i=1}^\infty A_i.</m>
+          Note that <m>x \in A</m> if and only if <m>x \in A_k</m> for some <m>k</m> if and only if <m>x \in A_k</m> for exactly one <m>k</m> (since the sets in <m>\{A_i\}_{i=1}</m> are disjoint).
+          It follows that
+          <md>
+            \delta_x(A) = \sum_{i=1}^\infty \delta_x(A_i).
+          </md>
+        </p>
+
+        <p>
+          Suppose now that <m>\M = \B(X)</m>.
+          If there is a compact set <m>K\subseteq X</m> such that <m>K</m> is not a Borel set, then <m>\delta_x</m> is not defined at <m>K</m>, and so <m>\delta_x</m> is not a Borel measure.
+          However, Borel measures are almost exclusively considered in Hausdorff topological spaces.<fn>In fact, one usually considers <em>locally compact</em> Hausdorff spaces. More on this next semester.</fn>
+          In Hausdorff topologically spaces, all compact sets are closed, and hence Borel (can you prove this?).
+          Assuming that compact sets are Borel, if <m>K</m> is compact, then <m>\delta_x(K)</m> is defined and finite. Thus <m>\delta_x</m> is a Borel measure.
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
@@ -73,6 +209,43 @@
             Show that <m>\F_0</m> is a <m>\sigma</m>-algebra.
           </p>
         </statement>
+
+        <solution>
+          <p>
+            As the emptyset <m>\emptyset</m> is in <m>\F</m> and <m>\mu(\emptyset)=0</m>, it follows that 
+            <m>\emptyset \in \F_0.</m>
+          </p>
+
+          <p>
+            Suppose <m>\{E_i\}_{i=1}^\infty</m> is a countable collection of sets in <m>\F_0</m>.
+            For each <m>i</m>, we can write <m>E_i = A_i \cup B_i</m>, where <m>A_i \in \F</m> and <m>B_i \subseteq C_i</m> for some set <m>C_i \in \F</m> with <m>\mu(C_i) = 0.</m>
+            Note that <m>\bigcup_i A_i \in \F</m>, <m>\bigcup_i B_i \subseteq \bigcup_i C_i</m>, <m>\bigcup_i C_i \in \F</m> and
+            <md>
+              \mu\left( \bigcup_{i=1}^\infty C_i\right) \leq \sum_{i=1}^\infty \mu(C_i) = 0.
+            </md>
+            Thus
+            <md>
+              \bigcup_{i=1}^\infty E_i = \left( \bigcup_{i=1}^\infty A_i \right) \cup \left( \bigcup_{i=1}^\infty B_i \right) \in \F_0.
+            </md>
+          </p>
+
+          <p>
+            Finally, suppose <m>E \in \F_0</m>.
+            Let <m>A</m> and <m>B</m> be such that <m>E = A \cup B</m> where <m>A \in \F</m> and <m>B \subseteq C </m> for some <m>C \in \F</m> with <m>\mu(C) = 0.</m>
+            Then
+            <md>
+              E^c = A^c \cap B^c.
+            </md>
+            Intersecting the above by <m>X = C^c \cup C</m> and noting that <m>C^c \subseteq B^c</m>, we get
+            <md>
+              <mrow>E^c \amp= (A^c \cap B^c) \cap (C^c \cup C) </mrow>
+              <mrow> \amp = (A^c \cap B^c \cap C^c) \cup (A^c \cap B^c \cap C) </mrow>
+              <mrow> \amp = (A^c \cap C^c) \cup (A^c \cap B^c \cap C).</mrow>
+            </md>
+            As <m>A^c \cap C^c \in \F</m> and <m>A^c \cap B^c \cap C \subseteq C</m>, it follows that <m>E^c \in \F_0.</m>
+            We have thus shown that <m>\F_0</m> is a <m>\sigma</m>-algebra.
+          </p>
+        </solution>
       </task>
 
       <task>
@@ -86,6 +259,40 @@
             Show that <m>\mu_0</m> is a measure on <m>(X,\F_0)</m>. (You should first show that is well-defined).
           </p>
         </statement>
+
+        <solution>
+          <p>
+            We will first show that <m>\mu_0</m> is well-defined.
+            Suppose <m>A_1 \cup B_1 = A_2 \cup B_2</m> where <m>A_1,A_2 \in \F</m>, and <m>B_1 \subseteq C_1</m> and <m>B_2 \subseteq C_2</m> for some <m>C_1,C_2 \in \F</m> with <m>\mu(C_1)= 0 = \mu(C_2).</m>
+            Then
+            <md>
+              A_1 \subseteq A_1 \cup B_1 = A_2\cup B_2 \subseteq A_2 \cup C_2.
+            </md>
+            It follows that
+            <md>
+              \mu(A_1) \leq \mu(A_2) + \mu(C_2) = \mu(A_2).
+            </md>
+            Similarly, <m>\mu(A_2)\leq \mu(A_1).</m>
+            Hence, <m>\mu(A_1) = \mu(A_2).</m>
+            It follows that <m>\mu_0</m> is well-defined.
+          </p>
+
+          <p>
+            Clearly, <m>\mu_0(\emptyset) = \mu(\emptyset) = 0</m>.
+            To show <m>\mu_0</m> is a measure, it remains to show that <m>\mu_0</m> is countably additive.
+            Let <m>\{E_i\}_{i=1}^\infty</m> be a countable collection of disjoint sets in <m>\F_0</m>
+            For each <m>i</m>, we can write <m>E_i = A_i \cup B_i</m>, where <m>A_i \in \F</m> and <m>B_i \subseteq C_i</m> for some set <m>C_i \in \F</m> with <m>\mu(C_i) = 0.</m>
+            Note that, <m>\{A_i\}_{i=1}^\infty</m> is a disjoint collection of sets in <m>\F</m>.
+            Thus
+            <md>
+              <mrow>\mu_0\left( \bigcup_{i=1}^\infty E_i\right) \amp = \mu_0\left( \bigcup_{i=1}^\infty A_i \cup \bigcup_{i=1}^\infty B_i\right)</mrow>
+              <mrow> \amp = \mu\left( \bigcup_{i=1}^\infty A_i\right) </mrow>
+              <mrow> \amp = \sum_{i=1}^\infty \mu(A_i) </mrow>
+              <mrow> \amp = \sum_{i=1}^\infty \mu_0(E_i), </mrow>
+            </md>
+            completing the proof.
+          </p>
+        </solution>
       </task>
 
       <task>
@@ -94,6 +301,24 @@
             Show that <m>(X,\F_0,\mu_0)</m> is a complete measure space.
           </p>
         </statement>
+
+        <solution>
+          <p>
+            Suppose <m>E \in\F_0</m> with <m>\mu_0(E) = 0.</m>
+            Then, <m>E = A \cup B</m> where <m>A \in \F</m>, and <m>B \subseteq C</m> for a set <m>C \in \F</m> with <m>\mu(C) = 0</m>.
+            As <m>\mu_0(E) =0</m>, we also have <m>\mu(A) =0.</m>
+          </p>
+
+          <p>
+            Take any <m>D \subseteq E</m>.
+            Then 
+            <md>
+              D \subseteq A\cup B \subseteq A\cup C.
+            </md>
+            Note <m>\mu(A\cup C) \leq \mu(A) + \mu(C) = 0</m>, and so writing <m>D</m> as <m>\emptyset \cup D</m>, we see that <m>D \in \F_0.</m>
+            Hence <m>(X,\F_0,\mu_0)</m> is a complete measure space.
+          </p>
+        </solution>
       </task>
     </exercise>
   </page>
