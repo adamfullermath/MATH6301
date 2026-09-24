@@ -53,6 +53,51 @@ var ptx_lunr_docs = [
   "number": "4",
   "title": "",
   "body": "  Let be a measure space.     Define a collection of subsets by Show that is a -algebra.    As the emptyset is in and , it follows that   Suppose is a countable collection of sets in . For each , we can write , where and for some set with Note that , , and Thus   Finally, suppose . Let and be such that where and for some with Then Intersecting the above by and noting that , we get As and , it follows that We have thus shown that is a -algebra.      Define on by when and for some with . Show that is a measure on . (You should first show that is well-defined).    We will first show that is well-defined. Suppose where , and and for some with Then It follows that Similarly, Hence, It follows that is well-defined.  Clearly, . To show is a measure, it remains to show that is countably additive. Let be a countable collection of disjoint sets in For each , we can write , where and for some set with Note that, is a disjoint collection of sets in . Thus completing the proof.      Show that is a complete measure space.    Suppose with Then, where , and for a set with . As , we also have   Take any . Then Note , and so writing as , we see that Hence is a complete measure space.    "
+},
+{
+  "id": "homework-3",
+  "level": "1",
+  "url": "homework-3.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Homework 02",
+  "body": " Homework 02   Due: Friday 9th October 2026 .   Instructions: Solutions should be written (or typed) clearly and legibly. Homeworks should be written alone without the use of AI.      Let be a non-empty set and let be an outer-measure on . Take a subset . Show that, if , then is -measurable.      Let be an uncountable set. Let be the collection of all countable subsets of . Define , by for all .     Show that is a semiring, and that is a premeasure on .      Let be the outer measure induced by . Calculate for each .      Let be the collection of -measurable sets. Give a description of the -measurable subsets.      Define by for all . Show that is a measure on .      Let be the Carathéodory extension of (i.e. is the restriction of to the -measurable sets).      Note that is also an extension of . Why does this not contradict the Carathéodory-Hahn Theorem?       Let be the Cantor set; let ; and let be the Cantor-Lebesgue function. Let be the Borel measure on induced by . I.e. and   Show that , , and .      Suppose and are measures on a measurable space and (i.e. for all ). Define on by      Show that is a measure on .      Show that (where is defined by for ).      Show that if is -finite then the is the unique measure satisfying .    Assume there are two such measures and and show they have to be equal on sets with . Then move to general measurable sets.      "
+},
+{
+  "id": "homework-3-3-1",
+  "level": "2",
+  "url": "homework-3.html#homework-3-3-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Let be a non-empty set and let be an outer-measure on . Take a subset . Show that, if , then is -measurable.   "
+},
+{
+  "id": "homework-3-3-2",
+  "level": "2",
+  "url": "homework-3.html#homework-3-3-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Let be an uncountable set. Let be the collection of all countable subsets of . Define , by for all .     Show that is a semiring, and that is a premeasure on .      Let be the outer measure induced by . Calculate for each .      Let be the collection of -measurable sets. Give a description of the -measurable subsets.      Define by for all . Show that is a measure on .      Let be the Carathéodory extension of (i.e. is the restriction of to the -measurable sets).      Note that is also an extension of . Why does this not contradict the Carathéodory-Hahn Theorem?    "
+},
+{
+  "id": "homework-3-3-3",
+  "level": "2",
+  "url": "homework-3.html#homework-3-3-3",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Let be the Cantor set; let ; and let be the Cantor-Lebesgue function. Let be the Borel measure on induced by . I.e. and   Show that , , and .   "
+},
+{
+  "id": "homework-3-3-4",
+  "level": "2",
+  "url": "homework-3.html#homework-3-3-4",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Suppose and are measures on a measurable space and (i.e. for all ). Define on by      Show that is a measure on .      Show that (where is defined by for ).      Show that if is -finite then the is the unique measure satisfying .    Assume there are two such measures and and show they have to be equal on sets with . Then move to general measurable sets.    "
 }
 ]
 
