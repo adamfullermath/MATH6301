@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Homework 02</title>
+  <introduction>
+    <p>
+      Due: <alert>Friday 9th October 2026</alert>.
+    </p>
+    <p>
+      <alert>Instructions:</alert> Solutions should be written (or typed) clearly and legibly. Homeworks should be written alone without the use of AI.
+    </p>
+  </introduction>
+
+  <page>
+    <exercise>
+        <statement>
+                <p>
+                    Let <m>X</m> be a non-empty set and let <m>\mu^*</m> be an outer-measure on
+                    <m>X</m>.
+                    Take a subset <m>E \subseteq X</m>.
+                    Show that, if <m>\mu^*(E) = 0</m>, then <m>E</m> is <m>\mu^*</m>-measurable.
+                </p>            
+        </statement>
+    </exercise>
+
+    <exercise>
+        <introduction>
+            <p>
+                Let <m>X</m> be an uncountable set.
+                Let <m>\S</m> be the collection of all countable subsets of <m>X</m>.
+                Define <m>\nu \colon \S \rightarrow [0,\infty]</m>, by <m>\nu(A) = 0</m> for
+                all <m>A \in \S</m>.
+            </p>
+        </introduction>
+
+        <task>
+            <statement>
+                <p>
+                    Show that <m>\S</m> is a semiring, and that <m>\nu</m> is a premeasure on <m>\S</m>.
+                </p>
+            </statement>
+        </task>
+
+        <task>
+            <statement>
+                <p>
+                    Let <m>\nu^*</m> be the outer measure induced by <m>\nu</m>.
+                    Calculate <m>\nu^*(A)</m> for each <m>A \subseteq X</m>.
+                </p>
+            </statement>
+        </task>
+
+        <task>
+            <statement>
+                <p>
+                    Let <m>\N</m> be the collection of <m>\nu^*</m>-measurable sets.
+                    Give a description of the <m>\nu^*</m>-measurable subsets.
+                </p>
+            </statement>
+        </task>
+
+        <task>
+            <statement>
+                <p>
+                    Define <m>\mu \colon \P(X) \rightarrow [0,\infty]</m> by
+                    <m>\mu(A) = 0</m> for all <m>A \subseteq X</m>.
+                    Show that <m>\mu</m> is a measure on <m>(X, \P(X))</m>.
+                </p>
+            </statement>
+        </task>
+        
+        <task>
+            <statement>
+                <p>
+                    Let <m>\overline{\nu}</m> be the Carathéodory extension of <m>\nu</m> (i.e. <m>\overline{\nu}</m> is the restriction of <m>\nu^*</m> to the <m>\nu^*</m>-measurable sets).
+                </p>
+            </statement>
+        </task>
+
+        <task>
+            <statement>
+                <p>
+                    Note that <m>\mu</m> is also an extension of <m>\S</m>.
+                    Why does this not contradict the Carathéodory-Hahn Theorem?
+                </p>
+            </statement>
+        </task>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>
+                Let <m>C \subseteq [0,1]</m> be the Cantor set; let
+                <m>U = [0,1]\backslash C</m>; and let
+                <m>\phi \colon [0,1] \rightarrow [0,1]</m> be the Cantor-Lebesgue function.
+                Let <m>\mu</m> be the Borel measure on <m>[0,1]</m> induced by <m>\phi</m>.
+                I.e. <m>\mu((c,d]) = \phi(d) - \phi(c)</m> and <m>\mu(\{0\}) = \phi(0).</m>
+            </p>
+
+            <p>
+                Show that <m>\mu([0,1]) = 1</m>, <m>\mu(U) = 0</m>, and <m>\mu(C) = 1</m>.
+            </p>
+        </statement>
+    </exercise>
+
+    <exercise>
+    <introduction>
+        <p>
+            Suppose <m>\mu</m> and <m>\nu</m> are measures on a measurable space <m>(X,\mathcal{F})</m> and <m>\mu \geq \nu</m> (i.e. <m>\mu(E) \geq \nu(E)</m> for all <m>E\in \mathcal{F}</m>).
+            Define <m>\lambda</m> on <m>\mathcal{F}</m> by
+            <md> \lambda(E) = \sup\{\mu(F) - \nu(F) \colon F \subseteq E \text{ measurable, } \nu(F)&lt; \infty\}. </md>        
+        </p>
+    </introduction>
+    <task>
+        <statement>
+            <p>
+                Show that <m>\lambda</m> is a measure on <m>(X,\mathcal{F})</m>.
+            </p>
+        </statement>
+    </task>
+    <task>
+        <statement>
+            <p>
+                Show that <m>\nu + \lambda = \mu</m> (where <m>\nu + \lambda</m> is defined by <m>(\nu+\lambda)(E) = \nu(E) + \lambda(E)</m> for <m>E \in \F</m>).
+            </p>
+        </statement>
+    </task>
+    <task>
+        <statement>
+            <p>
+                Show that if <m>(X,\mathcal{F},\nu)</m> is <m>\sigma</m>-finite then the <m>\lambda</m> is the unique measure satisfying <m>\nu + \lambda = \mu</m>.
+            </p>
+        </statement>
+        <hint>
+            <p>
+                Assume there are two such measures <m>\lambda_1</m> and <m>\lambda_2</m> and show they have to be equal on sets with <m>\nu(E)&lt;\infty</m>. Then move to general measurable sets.
+            </p>
+        </hint>
+    </task>
+    </exercise>
+  </page>
+</worksheet>

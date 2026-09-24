@@ -14,7 +14,9 @@
     \newcommand{\B}{\mathcal{B}}
     \newcommand{\F}{\mathcal{F}}
     \newcommand{\M}{\mathcal{M}}
+    \newcommand{\N}{\mathcal{N}}
     \newcommand{\P}{\mathcal{P}}
+    \renewcommand{\S}{\mathcal{S}}
 
     \newcommand{\bN}{\mathbb N}
     \newcommand{\bZ}{\mathbb Z}
