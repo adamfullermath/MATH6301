@@ -57,6 +57,14 @@
 
     </chapter>
 
+    <chapter>
+      <title>Midterms</title>
+
+      <!-- Include homework files -->
+      <xi:include href="./exams/exam01.ptx"/>
+
+    </chapter>
+
     <!-- Include additional chapters for other categories -->
 
     </book>

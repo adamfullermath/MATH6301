@@ -21,6 +21,21 @@
                     Show that, if <m>\mu^*(E) = 0</m>, then <m>E</m> is <m>\mu^*</m>-measurable.
                 </p>            
         </statement>
+
+        <solution>
+            <p>
+                Assume <m>\mu^*(E)=0</m>.
+                Let <m>A\subseteq X</m> be any subset.
+                Since <m>A\cap E</m>, we have that <m>\mu^*(A\cap E)=0</m> by the monotonicity of <m>\mu^*</m>.
+                We also have that, <m>\mu^*(A)\geq \mu^*(A\cap E^c)</m>, again by monotonicity.
+                Thus,
+                <md>
+                    <mrow>\mu^*(A) \amp = \mu^*(A) + \mu^*(A\cap E)</mrow>
+                    <mrow>\amp \geq \mu^*(A\cap E^c)+ \mu^*(A\cap E).</mrow>
+                </md>
+                It follows that <m>\mu^*(A) = \mu^*(A\cap E) + \mu^*(A\cap E^c)</m>, and hence <m>E</m> is <m>\mu^*</m>-measurable.
+            </p>
+        </solution>
     </exercise>
 
     <exercise>
@@ -39,6 +54,26 @@
                     Show that <m>\S</m> is a semiring, and that <m>\nu</m> is a premeasure on <m>\S</m>.
                 </p>
             </statement>
+
+            <solution>
+                <p>
+                    Any subset of a countable set is countable, <url href="https://adamfullermath.github.io/graduate-analysis/appendix-prereqs-4.html#prop-countable">Proposition A.2.6.</url>.
+                    Thus, is <m>A,B \in \S</m> then <m>A \cap B \in \S</m> and <m>A\backslash B \in \S</m>.
+                    Hence <m>\S</m> is a semiring.
+                </p>
+
+                <p>
+                    If <m>\{A_i\}_{i=1}^n</m> are disjoint countable sets then
+                    <md>
+                        0 = \nu\left(\bigcup_{i=1}^n A_i\right) = \sum_{i=1}^n 0 = \sum_{i=1}^n\nu(A_i).
+                    </md>
+                    And if <m>A \subseteq \bigcup_{i=1}^\infty A_i</m> for a countable family <m>\{A_i\}_{i=1}^\infty</m> of countable sets, then
+                    <md>
+                        0 = \nu(A) = \sum_{i=1}^n 0 = \sum_{i=1}^\infty \nu(A_i).
+                    </md>
+                    Hence <m>\nu</m> is a premeasure on <m>\S.</m>
+                </p>
+            </solution>
         </task>
 
         <task>
@@ -48,6 +83,30 @@
                     Calculate <m>\nu^*(A)</m> for each <m>A \subseteq X</m>.
                 </p>
             </statement>
+
+            <solution>
+                <p>
+                    Let <m>A\subseteq X</m> be countable.
+                    Then <m>\mu^*(A)=0</m>.
+                    This can be shown directly.
+                    Alternatively, it follows from <url href="https://adamfullermath.github.io/graduate-analysis/sec-construction.html#thm-Car-ext-1">Theorem 2.3.9</url>.
+
+                </p>
+
+                <p>
+                    Suppose now that <m>A\subseteq X</m> is uncountable.
+                    Since a countable union of countable sets is countable, there is no countable collection of sets <m>\{A_i\}_{i=1}^\infty</m> in <m>\S</m> such that <m>A \subseteq \bigcup_{i=1}^\infty A_i</m>.
+                    Thus <m>\mu^*(A) = \infty</m>, (see <url href="https://adamfullermath.github.io/graduate-analysis/sec-construction.html#thm-outer-measure">Theorem 2.3.2</url>).
+                </p>
+                <p>
+                    Hence, for <m>A \subseteq X</m>
+                    <md>
+                        \nu^*(A) = \begin{cases}0 \amp A \text{ countable},\\
+                        \infty \amp A \text{ uncountable}.\end{cases}
+                    </md>
+                    
+                </p>
+            </solution>
         </task>
 
         <task>
@@ -57,6 +116,23 @@
                     Give a description of the <m>\nu^*</m>-measurable subsets.
                 </p>
             </statement>
+
+            <solution>
+                <p>
+                    We will show that <m>\N = \P(X)</m>.
+                    To this end, fix <m>E \subseteq X</m>.
+                    Take any <m>A \subseteq X</m>.
+                    If <m>A</m> is countable, then both <m>A\cap E</m> and <m>A \cap E^c</m> are countable.
+                    Thus,
+                    <m>\nu^*(A)=\nu^*(A\cap E) + \nu^*(A\cap E^c)=0.</m>
+                    If <m>A</m> is uncountable, then at least one of <m>A \cap E</m> and <m>A \cap E^c</m> is uncountable.
+                    Thus,
+                    <md>
+                        \nu^*(A) = \infty = \nu^*(A\cap E) + \nu^*(A\cap E^c).
+                    </md>
+                    Hence <m>E</m> is measurable, and thus <m>\N = \P(X).</m>
+                </p>
+            </solution>
         </task>
 
         <task>
@@ -67,6 +143,16 @@
                     Show that <m>\mu</m> is a measure on <m>(X, \P(X))</m>.
                 </p>
             </statement>
+
+            <solution>
+                <p>
+                    There isn't much to show here. <m>\mu(\emptyset) = 0</m>, and
+                    <md>
+                        \mu\left(\bigcup_{i=1}^\infty A_i\right) = \sum_{i=1}^\infty \mu(A_i)=0
+                    </md>
+                    for any countable collection of sets <m>\{A_i\}_{i=1}^\infty</m>.
+                </p>
+            </solution>
         </task>
         
         <task>
@@ -84,6 +170,14 @@
                     Why does this not contradict the Carathéodory-Hahn Theorem?
                 </p>
             </statement>
+
+            <solution>
+                <p>
+                    The Carathéodory-Hahn Theorem only guarantees uniqueness in the case when the premeasure <m>\nu</m> is <m>\sigma</m>-finite.
+                    As <m>X</m> is uncountable, and <m>\S</m> is the collection of all countable subsets of <m>X</m>, <m>X</m> can not be covered by countably many elements of <m>\S</m>.
+                    Thus <m>\nu</m> is not <m>\sigma</m>-finite.
+                </p>
+            </solution>
         </task>
     </exercise>
 
@@ -101,6 +195,43 @@
                 Show that <m>\mu([0,1]) = 1</m>, <m>\mu(U) = 0</m>, and <m>\mu(C) = 1</m>.
             </p>
         </statement>
+
+        <solution>
+            <p>
+                By the definition of <m>\phi</m> (and <m>U</m>), we can write <m>U = \bigcup_{k=1}^\infty I_k</m>, where <m>\{I_k\}_{k=1}^\infty</m> is a disjoint collection of open intervals, and <m>\phi</m> is constant on each <m>I_k.</m>
+                For each <m>k</m>, let <m>I_k= (a_k,b_k).</m>
+            </p>
+
+            <p>
+                Fix <m>k</m>.
+                As <m>\phi</m> is continuous, and <m>\phi(x)</m> is constant for all <m>x \in (a_k,b_k)</m>, it follows that <m>\phi</m> is constant on <m>[a_k,b_k]</m>.
+                Hence
+                <md>
+                    \mu(I_k) \leq \mu((a_k,b_k]) = \phi(b_k) - \phi(a_k) = 0.
+                </md>
+                Thus, <m>\mu(I_k)=0.</m>
+                Therefore,
+                <md>
+                    \mu(U)= \sum_{k=1}^\infty \mu(I_k) = 0.
+                </md>
+            </p>
+            <p>
+                Since <m>\phi</m> is the cumulative distribution function for <m>\mu</m> it follows that
+                <md>
+                    \mu([0,1])= \phi(1).
+                </md>
+                By the definition of <m>\phi</m>,
+                <md>
+                    \phi(1) = \sup_n\left\{\frac{2^n-1}{2^n} \right\} =1.
+                </md>
+                Hence, <m>\mu([0,1])=1</m>.
+            </p>
+
+            <p>
+                Finally, since <m>C \cup U = [0,1]</m>, it follows from the excision property that
+                <md>\mu(C) = \mu([0,1])-\mu(U)=1.</md>
+            </p>
+        </solution>
     </exercise>
 
     <exercise>
@@ -117,6 +248,48 @@
                 Show that <m>\lambda</m> is a measure on <m>(X,\mathcal{F})</m>.
             </p>
         </statement>
+
+        <solution>
+            <p>
+                First note that we can't define <m>\lambda(E) = \mu(E) - \nu(E)</m> since this value may not be defined (we could be looking at <m>\infty - \infty</m>).
+            </p>
+            <p>
+                It is clear that <m>\lambda(\emptyset)=0.</m>
+                Let <m>\{E_k\}_{k=1}^\infty</m> be disjoint sets in <m>\F</m> and let <m>E = \bigcup_{k=1}^\infty E_k</m>.
+                Note that if <m>F \subseteq E</m> is measurable with <m>\nu(F)\lt \infty</m>, then <m>\{F \cap E_k\}_k</m> is a disjoint collection of measurable sets with <m>F\cap E_k\subseteq E_k</m> and <m>\nu(F\cap E_k)\lt\infty.</m>
+                However, if <m>\{F_k\}_k</m> is a collection of (necessarily disjoint) sets with <m>F_k \subseteq E_k</m> and <m>\nu(F_k)\lt \infty</m> for each <m>k</m>, then it is possible that <m>\nu\left(\bigcup_{k=1}^\infty F_k\right)=\infty.</m>
+                Hence,
+                <md>
+                    <mrow>\lambda(E) \amp = \sup \left\{\mu(F)-\nu(F) \colon F\subseteq E,\ \nu(F)\lt \infty \right\} </mrow>
+                    <mrow> \amp = \sup \left\{\mu\left(\bigcup_k F_k\right)-\nu\left(\bigcup_k F_k\right) \colon F_k\subseteq E_k,\ \nu\left(\bigcup_k F_k\right)\lt \infty \right\} </mrow>
+                    <mrow> \amp \leq  \sup \left\{\mu\left(\bigcup_k F_k\right)-\nu\left(\bigcup_k F_k\right) \colon F_k\subseteq E_k,\ \nu(F_k)\lt \infty \right\} </mrow>
+                    <mrow> \amp =  \sup \left\{\sum_{k=1}^\infty[\mu(F_k)-\nu(F_k)] \colon F_k\subseteq E_k,\ \nu(F_k)\lt \infty \right\} </mrow>
+                    <mrow> \amp =  \sum_{k=1}^\infty\sup \left\{\mu(F_k)-\nu(F_k) \colon F_k\subseteq E_k,\ \nu(F_k)\lt \infty \right\}</mrow>
+                    <mrow> \amp = \sum_{k=1}^\infty \lambda(E_k). </mrow>
+                </md>
+                Note that the penultimate inequality holds since the <m>\{F_k\}_{k=1}^\infty</m> can be chosen independently of eachother, and all terms are positive (in general the supremum of a sum is less than or equal to the sum of the suprema).
+            </p>
+            <p>
+                Fix <m>n</m>.
+                Note that, a measurable set <m>F \subseteq \bigcup_{k=1}^n E_k</m> satisfies <m>\nu(F) \lt \infty</m> if and only if <m>\nu(F\cap E_k)\lt \infty</m> for each <m>k=1,\ldots,n.</m>
+                Hence, by similar reasoning as above,
+                <md>
+                    \lambda\left(\bigcup_{k=1}^n E_k\right) = \sum_{k=1}^n \lambda(E_k).
+                </md>
+                Thus,
+                <md>
+                    <mrow>\lambda(E) \amp = \sup \left\{\mu(F)-\nu(F) \colon F\subseteq E,\ \nu(F)\lt \infty \right\} </mrow> 
+                    <mrow> \amp= \left\{\mu\left(\bigcup_k F_k\right)-\nu\left(\bigcup_k F_k\right) \colon F_k\subseteq E_k,\ \nu\left(\bigcup_k F_k\right)\lt \infty \right\} </mrow>
+                    <mrow> \amp \geq \left\{\mu\left(\bigcup_{k=1}^n F_k\right)-\nu\left(\bigcup_{k=1}^n F_k\right) \colon F_k\subseteq E_k,\ \nu(F_k)\lt \infty \right\}  </mrow>
+                    <mrow> \amp =  \sum_{k=1}^n \lambda(E_k). </mrow>
+                </md>
+                As this holds for all <m>n</m>, it follows that
+                <md>
+                    \lambda(E) \geq \sum_{k=1}^\infty \lambda(E_k).
+                </md>
+                We have thus shown that <m>\lambda(E) = \sum_{k=1}^\infty\lambda(E_k)</m>, and hence <m>\lambda</m> is a measure.
+            </p>
+        </solution>
     </task>
     <task>
         <statement>
@@ -124,8 +297,25 @@
                 Show that <m>\nu + \lambda = \mu</m> (where <m>\nu + \lambda</m> is defined by <m>(\nu+\lambda)(E) = \nu(E) + \lambda(E)</m> for <m>E \in \F</m>).
             </p>
         </statement>
+
+        <solution>
+            <p>
+                Take <m>E \in \F</m>.
+                If <m>\nu(E) = \infty</m>, then <m>\mu(E)=\infty</m> and hence
+                <md>
+                    \infty = \lambda(E) + \nu(E) = \mu(E).
+                </md>
+                Suppose now that <m>\nu(E)\lt \infty.</m>
+                Then for all measurable <m>F \subseteq E</m>
+                <md>
+                    <mrow>\mu(E) - \nu(E) \amp= (\mu(F) - \nu(F)) + (\mu(E\backslash F)-\nu(E\backslash F)) </mrow>
+                    <mrow> \amp\geq \mu(F) - \nu(F).  </mrow>
+                </md>
+                Thus <m>\lambda(E) = \mu(E) - \nu(E)</m>, and so <m>\lambda(E) + \nu(E) = \mu(E).</m>             
+            </p>
+        </solution>
     </task>
-    <task>
+    <task xml:id="sig-fin">
         <statement>
             <p>
                 Show that if <m>(X,\mathcal{F},\nu)</m> is <m>\sigma</m>-finite then the <m>\lambda</m> is the unique measure satisfying <m>\nu + \lambda = \mu</m>.
@@ -136,6 +326,42 @@
                 Assume there are two such measures <m>\lambda_1</m> and <m>\lambda_2</m> and show they have to be equal on sets with <m>\nu(E)&lt;\infty</m>. Then move to general measurable sets.
             </p>
         </hint>
+
+        <solution>
+            <p>
+                Let <m>\lambda_1</m> and <m>\lambda_2</m> be two measures satisfying
+                <md>
+                    \nu + \lambda_1 = \mu =\nu + \lambda_2.
+                </md>
+                Take <m>F\subseteq X</m> measurable with <m>\nu(F)\lt \infty.</m>
+                Then
+                <md>
+                    \nu(F) + \lambda_1(F) = \nu(F) + \lambda_2(F).
+                </md>
+                As <m>\nu(F)\lt\infty</m>, it follows that <m>\lambda_1(F) = \lambda_2(F).</m>
+            </p>
+            <p>
+                If <m>(X,\F,\nu)</m> is <m>\sigma</m>-finite, then there are disjoint measurable sets <m>\{E_k\}_k</m> sets with <m>X = \bigcup_{k=1}^\infty E_k</m> and <m>\nu(E_k)\lt\infty</m> for each <m>k</m>.
+                Take any measurable <m>F \subseteq X</m>.
+                Then, for each <m>k</m>, <m>\nu(F\cap E_k)\lt \infty</m>, and so
+                <md>
+                    <mrow>\lambda_1(F)  \amp= \sum_{k=1}^\infty \lambda_1(F\cap E_k) </mrow>
+                    <mrow> \amp= \sum_{k=1}^\infty \lambda_2(F\cap E_k) </mrow>
+                    <mrow> \amp= \lambda_2(F). </mrow>
+                </md>
+                Hence <m>\lambda_1 = \lambda_2.</m>
+            </p>
+            <p>
+            Note that, if <m>(X,\F,\nu)</m> is not <m>\sigma</m>-finite, then <xref ref="sig-fin"/> does not necessarily hold.
+                For example, let <m>\nu</m> be the measure defined by
+                <md>\nu(E) = \begin{cases}0 &amp; \text{if }E = \emptyset\\ \infty &amp; \text{if }E \neq \emptyset,\end{cases} </md>
+                and let <m>\mu = \nu</m>.
+                Then, if <m>\lambda</m> is <em>any</em> measure on <m>(X,\F)</m>, we have that
+                <md>
+                    \nu + \lambda = \mu.
+                </md>
+            </p>
+        </solution>
     </task>
     </exercise>
   </page>

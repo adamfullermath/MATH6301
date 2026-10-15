@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Midterm 01</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> All questions are equally weighted. Answer all questions.
+    </p>
+  </introduction>
+
+  <page>
+    <exercise>
+      <task>
+        <statement>
+
+            <p>
+                Let <m>X</m> be any non-empty set.
+                Take <m>\M \subseteq \P(X)</m>.
+                What properties must <m>\M</m> satisfy in order to be a <em>
+                <m>\sigma</m>-algebra</em>?
+            </p>
+
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+              Let <m>X</m> be any set and let <m>\M</m> be a <m>\sigma</m>-algebra of
+              subsets of <m>X</m>.
+              Give the definition of a <em>measure</em> <m>\mu</m> on <m>(X,\M)</m>.
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+            <p>
+                Let <m>X</m> be a non-empty set.
+                Fix a point <m>x_0\in X</m>.
+                Define a function
+                <md>
+                    \delta_{x_0} \colon \P(X) \rightarrow [0,\infty],
+                </md>
+                by
+                <md> \delta_{x_0}(A) = \begin{cases} 1 &amp;\text{if }x_0
+                \in A;\\  0 &amp;\text{if }x_0 \notin A.
+                \end{cases} </md>
+                Show that <m>\delta_{x_0}</m> is a measure.
+            </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+      <task>
+        <statement>
+          <p>
+            Give the definition of an <em>outer measure</em>.
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+            <p>
+                Let <m>\mu^*</m> be an outer measure.
+                Give the definition of a <em>measurable set</em> with respect to <m>\mu^*</m>.
+            </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+           <p>
+               Let <m>X</m> be a set, and let <m>\S</m> be a collection of subsets of
+               <m>\S</m>.
+               Let <m>\mu \colon \S \rightarrow [0,\infty]</m> be a set function.
+               Define the <em>outer measure induced by <m>\mu</m></em>.
+           </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+              Let <m>X</m> be any non-empty set and let <m>\S =  \{\emptyset, X\}</m>
+              define <m>\mu(\emptyset)=0</m> and <m>\mu(X)=1</m>.
+              Determine the outer measure <m>\mu^*</m> induced by <m>\mu</m>.
+              Describe the <m>\sigma</m>-algebra of <m>\mu^*</m>-measurable sets.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <!-- <exercise>
+      <task>
+        <statement>
+            <p>
+                Let <m>X</m> be a non-empty set.
+                Give the definition of a <em>semiring</em> of subsets of <m>X</m>.
+            </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Give the definition of a <em>premeasure</em>.
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            State the Carathéodory-Hahn Theorem.
+          </p>
+        </statement>
+      </task>
+    </exercise> -->
+
+    <exercise>
+      <task>
+        <statement>
+            <p>
+                Give the definition of the Borel sets in <m>\bR</m>.
+            </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+            <p>
+                Let <m>\nu</m> be a Borel measure on a closed interval <m>[a,b]</m>.
+                Give the definition of the <em>cumulative distribution</em> function for
+                <m>\nu</m>.
+            </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+              Let <m>m</m> be the Lebesgue measure on <m>[0,1]</m> restricted to the Borel sets.
+              Define a Borel measure <m>\nu</m> on <m>[0,1]</m> by
+              <md>
+                \nu(E) = \frac{1}{2}m(E \cap [0,1/2)) + \frac{1}{3}m(E \cap [1/2,1]),
+              </md>
+              for all Borel sets <m>E \subseteq [0,1].</m>
+              Describe the cumulative distribution function <m>g_\nu</m> of <m>\nu</m>.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+    <introduction>
+      <p>
+        Let <m>(X,\M)</m> be a measurable space.
+      </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            Give the definition of a <em>signed measure</em> <m>\nu</m> on <m>(X,\M).</m>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Let <m>\nu</m> be a signed measure on <m>(X,\M).</m>
+            Give the definition of <em><m>\nu</m>-positive sets</em>; <em><m>\nu</m>-negative sets</em>; and <em><m>\nu</m>-mull sets.</em>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Let <m>\mu_1</m> and <m>\mu_2</m> be two finite measures on <m>(X,\M)</m>.
+            Show that <m>\nu = \mu_1 - \mu_2</m> defines a signed measure on <m>(X,\M)</m>.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+  </page>
+</worksheet>
