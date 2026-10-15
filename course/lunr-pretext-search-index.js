@@ -61,7 +61,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "",
   "title": "Homework 02",
-  "body": " Homework 02   Due: Friday 9th October 2026 .   Instructions: Solutions should be written (or typed) clearly and legibly. Homeworks should be written alone without the use of AI.      Let be a non-empty set and let be an outer-measure on . Take a subset . Show that, if , then is -measurable.      Let be an uncountable set. Let be the collection of all countable subsets of . Define , by for all .     Show that is a semiring, and that is a premeasure on .      Let be the outer measure induced by . Calculate for each .      Let be the collection of -measurable sets. Give a description of the -measurable subsets.      Define by for all . Show that is a measure on .      Let be the Carathéodory extension of (i.e. is the restriction of to the -measurable sets).      Note that is also an extension of . Why does this not contradict the Carathéodory-Hahn Theorem?       Let be the Cantor set; let ; and let be the Cantor-Lebesgue function. Let be the Borel measure on induced by . I.e. and   Show that , , and .      Suppose and are measures on a measurable space and (i.e. for all ). Define on by      Show that is a measure on .      Show that (where is defined by for ).      Show that if is -finite then the is the unique measure satisfying .    Assume there are two such measures and and show they have to be equal on sets with . Then move to general measurable sets.      "
+  "body": " Homework 02   Due: Friday 9th October 2026 .   Instructions: Solutions should be written (or typed) clearly and legibly. Homeworks should be written alone without the use of AI.      Let be a non-empty set and let be an outer-measure on . Take a subset . Show that, if , then is -measurable.    Assume . Let be any subset. Since , we have that by the monotonicity of . We also have that, , again by monotonicity. Thus, It follows that , and hence is -measurable.      Let be an uncountable set. Let be the collection of all countable subsets of . Define , by for all .     Show that is a semiring, and that is a premeasure on .    Any subset of a countable set is countable, Proposition A.2.6. . Thus, is then and . Hence is a semiring.  If are disjoint countable sets then And if for a countable family of countable sets, then Hence is a premeasure on       Let be the outer measure induced by . Calculate for each .    Let be countable. Then . This can be shown directly. Alternatively, it follows from Theorem 2.3.9 .  Suppose now that is uncountable. Since a countable union of countable sets is countable, there is no countable collection of sets in such that . Thus , (see Theorem 2.3.2 ).  Hence, for        Let be the collection of -measurable sets. Give a description of the -measurable subsets.    We will show that . To this end, fix . Take any . If is countable, then both and are countable. Thus, If is uncountable, then at least one of and is uncountable. Thus, Hence is measurable, and thus       Define by for all . Show that is a measure on .    There isn't much to show here. , and for any countable collection of sets .      Let be the Carathéodory extension of (i.e. is the restriction of to the -measurable sets).      Note that is also an extension of . Why does this not contradict the Carathéodory-Hahn Theorem?    The Carathéodory-Hahn Theorem only guarantees uniqueness in the case when the premeasure is -finite. As is uncountable, and is the collection of all countable subsets of , can not be covered by countably many elements of . Thus is not -finite.       Let be the Cantor set; let ; and let be the Cantor-Lebesgue function. Let be the Borel measure on induced by . I.e. and   Show that , , and .    By the definition of (and ), we can write , where is a disjoint collection of open intervals, and is constant on each For each , let   Fix . As is continuous, and is constant for all , it follows that is constant on . Hence Thus, Therefore,   Since is the cumulative distribution function for it follows that By the definition of , Hence, .  Finally, since , it follows from the excision property that       Suppose and are measures on a measurable space and (i.e. for all ). Define on by      Show that is a measure on .    First note that we can't define since this value may not be defined (we could be looking at ).  It is clear that Let be disjoint sets in and let . Note that if is measurable with , then is a disjoint collection of measurable sets with and However, if is a collection of (necessarily disjoint) sets with and for each , then it is possible that Hence, Note that the penultimate inequality holds since the can be chosen independently of eachother, and all terms are positive (in general the supremum of a sum is less than or equal to the sum of the suprema).  Fix . Note that, a measurable set satisfies if and only if for each Hence, by similar reasoning as above, Thus, As this holds for all , it follows that We have thus shown that , and hence is a measure.      Show that (where is defined by for ).    Take . If , then and hence Suppose now that Then for all measurable  Thus , and so       Show that if is -finite then the is the unique measure satisfying .    Assume there are two such measures and and show they have to be equal on sets with . Then move to general measurable sets.    Let and be two measures satisfying Take measurable with Then As , it follows that   If is -finite, then there are disjoint measurable sets sets with and for each . Take any measurable . Then, for each , , and so Hence   Note that, if is not -finite, then does not necessarily hold. For example, let be the measure defined by and let . Then, if is any measure on , we have that       "
 },
 {
   "id": "homework-3-3-1",
@@ -70,7 +70,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "",
-  "body": "  Let be a non-empty set and let be an outer-measure on . Take a subset . Show that, if , then is -measurable.   "
+  "body": "  Let be a non-empty set and let be an outer-measure on . Take a subset . Show that, if , then is -measurable.    Assume . Let be any subset. Since , we have that by the monotonicity of . We also have that, , again by monotonicity. Thus, It follows that , and hence is -measurable.   "
 },
 {
   "id": "homework-3-3-2",
@@ -79,7 +79,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "",
-  "body": "  Let be an uncountable set. Let be the collection of all countable subsets of . Define , by for all .     Show that is a semiring, and that is a premeasure on .      Let be the outer measure induced by . Calculate for each .      Let be the collection of -measurable sets. Give a description of the -measurable subsets.      Define by for all . Show that is a measure on .      Let be the Carathéodory extension of (i.e. is the restriction of to the -measurable sets).      Note that is also an extension of . Why does this not contradict the Carathéodory-Hahn Theorem?    "
+  "body": "  Let be an uncountable set. Let be the collection of all countable subsets of . Define , by for all .     Show that is a semiring, and that is a premeasure on .    Any subset of a countable set is countable, Proposition A.2.6. . Thus, is then and . Hence is a semiring.  If are disjoint countable sets then And if for a countable family of countable sets, then Hence is a premeasure on       Let be the outer measure induced by . Calculate for each .    Let be countable. Then . This can be shown directly. Alternatively, it follows from Theorem 2.3.9 .  Suppose now that is uncountable. Since a countable union of countable sets is countable, there is no countable collection of sets in such that . Thus , (see Theorem 2.3.2 ).  Hence, for        Let be the collection of -measurable sets. Give a description of the -measurable subsets.    We will show that . To this end, fix . Take any . If is countable, then both and are countable. Thus, If is uncountable, then at least one of and is uncountable. Thus, Hence is measurable, and thus       Define by for all . Show that is a measure on .    There isn't much to show here. , and for any countable collection of sets .      Let be the Carathéodory extension of (i.e. is the restriction of to the -measurable sets).      Note that is also an extension of . Why does this not contradict the Carathéodory-Hahn Theorem?    The Carathéodory-Hahn Theorem only guarantees uniqueness in the case when the premeasure is -finite. As is uncountable, and is the collection of all countable subsets of , can not be covered by countably many elements of . Thus is not -finite.    "
 },
 {
   "id": "homework-3-3-3",
@@ -88,7 +88,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "",
-  "body": "  Let be the Cantor set; let ; and let be the Cantor-Lebesgue function. Let be the Borel measure on induced by . I.e. and   Show that , , and .   "
+  "body": "  Let be the Cantor set; let ; and let be the Cantor-Lebesgue function. Let be the Borel measure on induced by . I.e. and   Show that , , and .    By the definition of (and ), we can write , where is a disjoint collection of open intervals, and is constant on each For each , let   Fix . As is continuous, and is constant for all , it follows that is constant on . Hence Thus, Therefore,   Since is the cumulative distribution function for it follows that By the definition of , Hence, .  Finally, since , it follows from the excision property that    "
 },
 {
   "id": "homework-3-3-4",
@@ -97,7 +97,52 @@ var ptx_lunr_docs = [
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "",
-  "body": "  Suppose and are measures on a measurable space and (i.e. for all ). Define on by      Show that is a measure on .      Show that (where is defined by for ).      Show that if is -finite then the is the unique measure satisfying .    Assume there are two such measures and and show they have to be equal on sets with . Then move to general measurable sets.    "
+  "body": "  Suppose and are measures on a measurable space and (i.e. for all ). Define on by      Show that is a measure on .    First note that we can't define since this value may not be defined (we could be looking at ).  It is clear that Let be disjoint sets in and let . Note that if is measurable with , then is a disjoint collection of measurable sets with and However, if is a collection of (necessarily disjoint) sets with and for each , then it is possible that Hence, Note that the penultimate inequality holds since the can be chosen independently of eachother, and all terms are positive (in general the supremum of a sum is less than or equal to the sum of the suprema).  Fix . Note that, a measurable set satisfies if and only if for each Hence, by similar reasoning as above, Thus, As this holds for all , it follows that We have thus shown that , and hence is a measure.      Show that (where is defined by for ).    Take . If , then and hence Suppose now that Then for all measurable  Thus , and so       Show that if is -finite then the is the unique measure satisfying .    Assume there are two such measures and and show they have to be equal on sets with . Then move to general measurable sets.    Let and be two measures satisfying Take measurable with Then As , it follows that   If is -finite, then there are disjoint measurable sets sets with and for each . Take any measurable . Then, for each , , and so Hence   Note that, if is not -finite, then does not necessarily hold. For example, let be the measure defined by and let . Then, if is any measure on , we have that     "
+},
+{
+  "id": "root-1-2-6-2",
+  "level": "1",
+  "url": "root-1-2-6-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Midterm 01",
+  "body": " Midterm 01    Instructions: All questions are equally weighted. Answer all questions.       Let be any non-empty set. Take . What properties must satisfy in order to be a  -algebra ?      Let be any set and let be a -algebra of subsets of . Give the definition of a measure  on .      Let be a non-empty set. Fix a point . Define a function by Show that is a measure.        Give the definition of an outer measure .      Let be an outer measure. Give the definition of a measurable set with respect to .      Let be a set, and let be a collection of subsets of . Let be a set function. Define the outer measure induced by .      Let be any non-empty set and let define and . Determine the outer measure induced by . Describe the -algebra of -measurable sets.         Give the definition of the Borel sets in .      Let be a Borel measure on a closed interval . Give the definition of the cumulative distribution function for .      Let be the Lebesgue measure on restricted to the Borel sets. Define a Borel measure on by for all Borel sets Describe the cumulative distribution function of .       Let be a measurable space.     Give the definition of a signed measure  on       Let be a signed measure on Give the definition of -positive sets ; -negative sets ; and -mull sets.       Let and be two finite measures on . Show that defines a signed measure on .      "
+},
+{
+  "id": "root-1-2-6-2-3-1",
+  "level": "2",
+  "url": "root-1-2-6-2.html#root-1-2-6-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "   Let be any non-empty set. Take . What properties must satisfy in order to be a  -algebra ?      Let be any set and let be a -algebra of subsets of . Give the definition of a measure  on .      Let be a non-empty set. Fix a point . Define a function by Show that is a measure.    "
+},
+{
+  "id": "root-1-2-6-2-3-2",
+  "level": "2",
+  "url": "root-1-2-6-2.html#root-1-2-6-2-3-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "   Give the definition of an outer measure .      Let be an outer measure. Give the definition of a measurable set with respect to .      Let be a set, and let be a collection of subsets of . Let be a set function. Define the outer measure induced by .      Let be any non-empty set and let define and . Determine the outer measure induced by . Describe the -algebra of -measurable sets.    "
+},
+{
+  "id": "root-1-2-6-2-3-3",
+  "level": "2",
+  "url": "root-1-2-6-2.html#root-1-2-6-2-3-3",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "   Give the definition of the Borel sets in .      Let be a Borel measure on a closed interval . Give the definition of the cumulative distribution function for .      Let be the Lebesgue measure on restricted to the Borel sets. Define a Borel measure on by for all Borel sets Describe the cumulative distribution function of .    "
+},
+{
+  "id": "root-1-2-6-2-3-4",
+  "level": "2",
+  "url": "root-1-2-6-2.html#root-1-2-6-2-3-4",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Let be a measurable space.     Give the definition of a signed measure  on       Let be a signed measure on Give the definition of -positive sets ; -negative sets ; and -mull sets.       Let and be two finite measures on . Show that defines a signed measure on .    "
 }
 ]
 
