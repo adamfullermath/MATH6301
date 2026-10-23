@@ -100,6 +100,60 @@ var ptx_lunr_docs = [
   "body": "  Suppose and are measures on a measurable space and (i.e. for all ). Define on by      Show that is a measure on .    First note that we can't define since this value may not be defined (we could be looking at ).  It is clear that Let be disjoint sets in and let . Note that if is measurable with , then is a disjoint collection of measurable sets with and However, if is a collection of (necessarily disjoint) sets with and for each , then it is possible that Hence, Note that the penultimate inequality holds since the can be chosen independently of eachother, and all terms are positive (in general the supremum of a sum is less than or equal to the sum of the suprema).  Fix . Note that, a measurable set satisfies if and only if for each Hence, by similar reasoning as above, Thus, As this holds for all , it follows that We have thus shown that , and hence is a measure.      Show that (where is defined by for ).    Take . If , then and hence Suppose now that Then for all measurable  Thus , and so       Show that if is -finite then the is the unique measure satisfying .    Assume there are two such measures and and show they have to be equal on sets with . Then move to general measurable sets.    Let and be two measures satisfying Take measurable with Then As , it follows that   If is -finite, then there are disjoint measurable sets sets with and for each . Take any measurable . Then, for each , , and so Hence   Note that, if is not -finite, then does not necessarily hold. For example, let be the measure defined by and let . Then, if is any measure on , we have that     "
 },
 {
+  "id": "homework-4",
+  "level": "1",
+  "url": "homework-4.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Homework 03",
+  "body": " Homework 03   Due: Friday 9th October 2026 .   Instructions: Solutions should be written (or typed) clearly and legibly. Homeworks should be written alone without the use of AI.      Let be a continuous function on a closed interval . For a partition of define as and define the arc length  of on as Show that is of bounded variation if and only if .       Let be a measurable space, and let be a measurable extended real-valued function with measurable domain . Show that the set is measurable for all     You will need to treat the values and differently than       Give an example of a measurable space and an extended real-valued function with measurable domain which satisfies is measurable for all , but is not a measurable function.       Let be a measurable space, and let be a sequence of measurable functions on . Show that the functions  ;  ;  ; and    are all measurable functions.      Let be a measurable space. Fix and let be the Dirac measure at . If is a non-negative measurable function on , what is the value of ?      Let be the counting measure on the subsets of , and let be a (necessarily measurable) function from the non-zero intergers to .  Show that is integrable with respect to if and only if the series converges absolutely to a finite number. Further show that if is integrable then      "
+},
+{
+  "id": "homework-4-3-1",
+  "level": "2",
+  "url": "homework-4.html#homework-4-3-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Let be a continuous function on a closed interval . For a partition of define as and define the arc length  of on as Show that is of bounded variation if and only if .   "
+},
+{
+  "id": "exer-f-c-meas",
+  "level": "2",
+  "url": "homework-4.html#exer-f-c-meas",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "   Let be a measurable space, and let be a measurable extended real-valued function with measurable domain . Show that the set is measurable for all     You will need to treat the values and differently than       Give an example of a measurable space and an extended real-valued function with measurable domain which satisfies is measurable for all , but is not a measurable function.    "
+},
+{
+  "id": "homework-4-3-3",
+  "level": "2",
+  "url": "homework-4.html#homework-4-3-3",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Let be a measurable space, and let be a sequence of measurable functions on . Show that the functions  ;  ;  ; and    are all measurable functions.   "
+},
+{
+  "id": "exer-dirac-integration",
+  "level": "2",
+  "url": "homework-4.html#exer-dirac-integration",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Let be a measurable space. Fix and let be the Dirac measure at . If is a non-negative measurable function on , what is the value of ?   "
+},
+{
+  "id": "homework-4-3-5",
+  "level": "2",
+  "url": "homework-4.html#homework-4-3-5",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Let be the counting measure on the subsets of , and let be a (necessarily measurable) function from the non-zero intergers to .  Show that is integrable with respect to if and only if the series converges absolutely to a finite number. Further show that if is integrable then    "
+},
+{
   "id": "root-1-2-6-2",
   "level": "1",
   "url": "root-1-2-6-2.html",
