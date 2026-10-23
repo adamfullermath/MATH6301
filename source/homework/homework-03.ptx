@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Homework 03</title>
+  <introduction>
+    <p>
+      Due: <alert>Friday 9th October 2026</alert>.
+    </p>
+    <p>
+      <alert>Instructions:</alert> Solutions should be written (or typed) clearly and legibly. Homeworks should be written alone without the use of AI.
+    </p>
+  </introduction>
+
+  <page>
+   <exercise>
+        <statement>
+            <p>
+                Let <m>f</m> be a continuous function on a closed interval <m>[a,b]</m>.
+                For a partition <m>P = \{a=x_0\lt \ldots \lt x_n = b\}</m> of <m>[a,b]</m> define
+                <m>L(f,P)</m> as
+                <md>
+                    L(f,P) = \sum_{i=1}^n \sqrt{(x_i - x_{i-1})^2 + (f(x_i)-f(x_{i-1}))^2},
+                </md>
+                and define the <term>arc length</term> <m>L</m> of <m>f</m> on <m>[a,b]</m> as
+                <md>
+                    L = \sup_P L(f,P).
+                </md>
+
+                Show that <m>f</m> is of bounded variation if and only if <m>L\lt \infty</m>.
+            </p>
+        </statement>
+    </exercise>
+
+    <exercise xml:id="exer-f-c-meas">
+    <task>
+
+    <statement>
+        <p>
+            Let <m>(X,\mathcal{F})</m> be a measurable space, and let <m>f</m> be a measurable extended real-valued function with measurable domain <m>E</m>.
+            Show that the set
+            <md> \{x \in E \colon f(x) =c \}</md>
+            is measurable for all <m>c \in \mathbb{R}\cup \{-\infty,\infty\}.</m>
+        </p>
+    </statement>
+    <hint>
+        <p>
+            You will need to treat the values <m>c=-\infty</m> and <m>c=\infty</m> differently than <m>c \in \mathbb{R}</m>
+        </p>
+    </hint>
+    </task>
+    <task>
+    <statement>
+        <p>
+            Give an example of a measurable space <m>(X,\mathcal{F})</m> and an extended real-valued function <m>f</m> with measurable domain <m>E</m> which satisfies
+            <md> \{x \in E \colon f(x) =c \}</md>
+            is measurable for all <m>c \in \mathbb{R}\cup \{-\infty,\infty\}</m>, but <m>f</m> is <em>not</em> a measurable function.
+        </p>
+    </statement>
+    </task>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>
+            Let <m>(X,\mathcal{F})</m> be a measurable space, and let <m>(f_n)_n</m> be a sequence of measurable functions on <m>X</m>.
+            Show that the functions
+            <ol>
+            <li><m>\sup_n f_n</m>;
+            </li>
+            <li><m>\inf_n f_n</m>;
+            </li>
+            <li><m>\limsup_n f_n</m>; and
+            </li>
+            <li><m>\liminf_n f_n</m>
+            </li>
+            </ol>
+            are all measurable functions.
+        </p>
+    </statement>
+</exercise>
+
+<exercise xml:id="exer-dirac-integration">
+<statement>
+    <p>
+        Let <m>(X,\mathcal{F})</m> be a measurable space.
+        Fix <m>x \in X</m> and let <m>\delta_x</m> be the Dirac measure at <m>x</m>.
+        If <m>f</m> is a non-negative measurable function on <m>X</m>, what is the value of <m>\int_X f \,d \delta_x</m>?     
+    </p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+    <p>
+        Let <m>c</m> be the counting measure on the subsets of <m>\mathbb{N}</m>, and let <m>f</m> be a (necessarily measurable) function from the non-zero intergers <m>\mathbb{Z}_{\gt 0}</m> to <m>\mathbb{R}</m>.</p>
+        <p>Show that <m>f</m> is integrable with respect to <m>c</m> if and only if the series <m>\sum_{n=1}^\infty f(n)</m> converges absolutely to a finite number. 
+        Further show that if <m>f</m> is integrable then
+        <md> \int_{\mathbb{Z}_{\gt 0}} f \,dc = \sum_{k=1}^\infty f(n).</md>     
+    </p>
+</statement>
+</exercise>
+  </page>
+</worksheet>
